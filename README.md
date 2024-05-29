@@ -1,14 +1,18 @@
 
 # Web Template
 
-This is a static site template for websites or games.
+### A clicker-type virtual pet game about raising monsters for battle!
+
+## [Play Monsterpet Clickfarm on Itch.io](https://skeddles.itch.io/monsterpet-clickfarm) 
+
+Raise your very own monsterpet! Keep it fed and well-rested as you train it's level up. Then bring your pet to the arena and fight to win money! Upgrade your equipment to make caring for your pet easier.
 
 
-### Setup
+# Contribution
 
-Run `git clone https://github.com/skeddles/skeddles-web-template` to download the code.
+This game is pure javascript, compiled with Node.js.
 
-Change to the `skeddles-web-template` folder and run `npm install`
+To install fork / clone the repository and run `npm install` to install all dependencies.
 
 ### How To Run
 
