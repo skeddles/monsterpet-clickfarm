@@ -47,11 +47,6 @@ function train() {
 		else {
 			SOUND.play('xp'+ (1+Math.floor(percent*7)));
 		}
-
-		//let newLevel = levelFromXP(GAME.pet.xp+1); //for some reason without +1 it doesn't level you up until you pass the xp requirement
-		//if (newLevel > GAME.pet.level)
-		//	alert('level up!');
-		//GAME.pet.level = newLevel;
 	}
 	
 }
