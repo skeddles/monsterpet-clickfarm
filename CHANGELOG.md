@@ -2,7 +2,10 @@
 
 ## 1.1.0 - 2024-05-29
 
-### Changed
+### Fixed
+- Now renders properly on displays with different DPR
+
+### Removed
 - Arena no longer jumps to most expensive tier
 
 ## 1.0.0 - 2022-01-27

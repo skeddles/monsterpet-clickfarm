@@ -122,14 +122,14 @@ function drawButton (text, shadowColor, srcX, w, h, x, y, enabled = true) {
 }
 
 function resizeWindow () {
-	
+	const DPR = window.devicePixelRatio;
 
 	//calculate zoom level and apply
-	ZOOM = Math.max(1, Math.floor(Math.min(window.innerWidth/W, window.innerHeight/H)));
+	ZOOM = Math.max(1, Math.floor(Math.min(window.innerWidth*DPR/W, window.innerHeight*DPR/H)));
 
 	//zoom canvas 
-	CANVAS.style.width = W * ZOOM;
-	CANVAS.style.height = H * ZOOM;
+	CANVAS.style.width = W * ZOOM / DPR;
+	CANVAS.style.height = H * ZOOM / DPR;
 
 	console.log('resized window to',ZOOM);
 }

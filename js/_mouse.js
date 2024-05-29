@@ -7,9 +7,10 @@ var Mouse = {
 
 CANVAS.onmousemove = function (e) {
 	let rect = CANVAS.getBoundingClientRect();
+	const DPR = window.devicePixelRatio;
 
-	Mouse.x = (e.clientX - rect.left) / ZOOM; //x position within the element.
-	Mouse.y = (e.clientY - rect.top) / ZOOM;  //y position within the element.
+	Mouse.x = (e.clientX - rect.left) / ZOOM * DPR; //x position within the element.
+	Mouse.y = (e.clientY - rect.top) / ZOOM * DPR;  //y position within the element.
 }
 
 CANVAS.onmouseleave  = function (e) {
