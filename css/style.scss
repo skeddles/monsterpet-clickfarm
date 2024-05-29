@@ -1,0 +1,29 @@
+html, body {
+	margin: 0; padding: 0;
+	text-align: center;
+	background: #17161a;
+	width: 100%;
+	height: 100%;
+} 
+
+body {
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
+	flex-wrap: wrap;
+}
+
+canvas {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+
+	
+	font-smooth: none; //not sure about these
+    -webkit-font-smoothing : none; //not sure about these
+	
+}
+
+@font-face {
+    font-family: 'mainfont';
+    src: url('./04B_03_.TTF');
+}
