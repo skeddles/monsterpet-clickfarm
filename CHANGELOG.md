@@ -1,6 +1,11 @@
 # Changelog
 
-## 1.0.0
+## 1.1.0 - 2024-05-29
+
+### Changed
+- Arena no longer jumps to most expensive tier
+
+## 1.0.0 - 2022-01-27
 
 ### Added
 

@@ -362,7 +362,6 @@ function doBattle () {
 							BATTLE.ing = false;
 
 							saveGame();
-							setCurrentArena();
 
 							console.log(GAME.tutorial, 6 && !playerWon,GAME.tutorial == 6 && !playerWon)
 							//tutorial
@@ -417,16 +416,6 @@ function playAnimations (delta) {
 		//animate property
 		a.object[a.property] += (a.endingValue - a.startingValue) / (a.length/1000) * delta;
 	});
-}
-
-//sets the current arena to the highest you can afford and have unlocked
-function setCurrentArena () {
-	currentArena = GAME.unlockedArena;
-
-	while (calculateEntryFee() > GAME.money) {
-		currentArena--;
-	}
-	console.log('set arena to',currentArena,'('+calculateEntryFee()+')');
 }
 
 //GAME.screen = 'arena';

@@ -246,7 +246,6 @@ var mainScreen = {
 
 		//arena
 		if (between(138,81,67,20) && GAME.tutorial > 5 && !SLEEP.ing) {
-			setCurrentArena();
 			GAME.screen = 'arena';
 		}
 
