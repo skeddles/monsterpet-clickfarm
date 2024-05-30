@@ -61,6 +61,7 @@ function restUpdate (delta) {
 function endRest () {
 	SLEEP.ing = false;
 	SOUND.bgmusic.volume = GAME.settings.music;
+	SOUND.bgmusic.playbackRate = 1;
 }
 
 function rest () {
@@ -68,7 +69,8 @@ function rest () {
 	SLEEP.ing = true;
 	SLEEP.start = performance.now();
 	SLEEP.end = performance.now() + restLength()*1000;
-	SOUND.bgmusic.volume = GAME.settings.music / 2;
+	SOUND.bgmusic.volume = GAME.settings.music *0.7;
+	SOUND.bgmusic.playbackRate = 0.6;
 
 	if (GAME.pet.happiness > 100) 
 		GAME.pet.happiness = 100;
