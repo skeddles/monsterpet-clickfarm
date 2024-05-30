@@ -12,6 +12,8 @@ function update (now) {
 
 	CTX.fillRectColor('black',0,0,256,128);
 	
+	checkMouseHeld();
+
 	if (GAME.screen == 'main')
 		mainScreen.draw(delta);	
 	if (GAME.screen == 'intro')

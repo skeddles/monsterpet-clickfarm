@@ -2,6 +2,9 @@
 
 ## 1.1.0 - 2024-05-29
 
+### Added
+- You can now hold down mouse to click repeatedly
+
 ### Fixed
 - Now renders properly on displays with different DPR
 
