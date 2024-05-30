@@ -22,7 +22,7 @@ var menuScreen = {
 
 		//sound muting
 		if (between(100, 10,45, 20)) {
-			GAME.settings.music = (GAME.settings.music==0?0.2:0);
+			GAME.settings.music = (GAME.settings.music==0?0.4:0);
 			SOUND.bgmusic.volume = GAME.settings.music;
 			SOUND["tutorial_complete"].volume = GAME.settings.music;
 		}
