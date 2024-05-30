@@ -51,14 +51,16 @@ function restUpdate (delta) {
 	//check if sleep is done
 	if (performance.now() > SLEEP.end || GAME.pet.happiness == 100) {
 		console.log('done resting')
-		SLEEP.ing = false;
-		SOUND.bgmusic.volume = GAME.settings.music;
+		endRest();
 
 		//TUTORIAL
 		if (GAME.tutorial == 4) GAME.tutorial = 5;
 	}
+}
 
-	
+function endRest () {
+	SLEEP.ing = false;
+	SOUND.bgmusic.volume = GAME.settings.music;
 }
 
 function rest () {

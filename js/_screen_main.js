@@ -232,7 +232,7 @@ var mainScreen = {
 		//reset auto resting
 		canRestAfter = performance.now() + 5000;
 
-		if (SLEEP.ing) SLEEP.ing = false;
+		if (SLEEP.ing) endRest();
 
 		//action buttons
 		if (between(138,15,63,20) && GAME.tutorial > 0) feed();
