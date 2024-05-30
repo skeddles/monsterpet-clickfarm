@@ -10,12 +10,14 @@ app.on('ready', () => {
 		minHeight: 128,
 		minWidth: 256,
 		autoHideMenuBar: true,
+		icon: 'build/icon.ico',
     });
 
 	mainWindow.setMenu(null)
 	
     mainWindow.setTitle('Monsterpet Clickfarm');
     mainWindow.loadFile('build/index.html');
+
 
     mainWindow.on('closed', () => {
 		console.log('closed');
