@@ -27,13 +27,16 @@ CTX.fillRectColor = function () {
 var fontCanvas;
 fontCanvas = document.createElement('canvas');
 fontCanvas.style.outline = 'solid 1px grey';
-if (DEBUG) 
-	document.body.appendChild(fontCanvas);
 fontCanvas.width = 240;
 fontCanvas.height = 8;
-var fontCanvasContext = fontCanvas.getContext('2d');
+if (DEBUG) {
+	let DPR = window.devicePixelRatio;
+	document.body.appendChild(fontCanvas);
+}
 
-fontCanvasContext.font = '8px mainfont';
+var fontCanvasContext = fontCanvas.getContext('2d');
+var fontSize = 8;
+fontCanvasContext.font = fontSize+'px mainfont';
 CTX.textAtlas = {};
 CTX.fillText = function (text,x,y,color = '#ffffff',alignment = 'left') {
 	if (text.length == 0) return console.error('tried to draw empty string');
@@ -59,7 +62,8 @@ CTX.fillText = function (text,x,y,color = '#ffffff',alignment = 'left') {
 		fontCanvasContext.fillStyle = 'white';
 		fontCanvasContext.fillRect(0,8*atlasIndex,fontCanvas.width,8)
 		fontCanvasContext.textAlign = alignment;
-		fontCanvasContext.font = '8px mainfont';
+		fontCanvasContext.textRendering = "geometricPrecision"
+		fontCanvasContext.font = fontSize+'px mainfont';
 
 		//calculate x position to draw text at, based on the alignment
 		let drawXpostion = 0;
@@ -69,6 +73,7 @@ CTX.fillText = function (text,x,y,color = '#ffffff',alignment = 'left') {
 			fontCanvasContext.textAlign = 'left';
 			let offset = Math.round(fontCanvasContext.measureText(text).width/2);
 			drawXpostion = fontCanvas.width/2 - offset ;
+			console.log("DRAWPOSITION",drawXpostion,offset)
 		}
 
 		//draw text
@@ -78,7 +83,7 @@ CTX.fillText = function (text,x,y,color = '#ffffff',alignment = 'left') {
 
 		//threshold the text (convert to just transparent and the fill color)
 		let pixels = fontCanvasContext.getImageData(0,8*atlasIndex,fontCanvas.width,8);
-		let threshold = 200;
+		let threshold = 150;
 		var d = pixels.data, i = 0, l = d.length;
 		while (l-- > 0) {
 			const v = d[i] * 0.2126 + d[i+1] * 0.7152 + d[i+2] * 0.0722;
