@@ -4,6 +4,7 @@
 
 ### Added
 - You can now hold down mouse to click repeatedly
+- Windows build
 
 ### Fixed
 - Now renders properly on displays with different DPR

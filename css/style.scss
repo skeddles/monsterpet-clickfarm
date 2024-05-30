@@ -27,3 +27,41 @@ canvas {
     font-family: 'mainfont';
     src: url('./04B_03_.TTF');
 }
+
+electronprompt {
+	//put on center of screen
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	//background is transparent black
+	background: #3d3d3d;
+	border: solid 1px #ccc;
+	border-radius: 0.5em;
+	padding: 2em;
+	color: white;
+	font-family: 'mainfont';
+	display: none;
+
+	//scale up based on screen width 
+	font-size: 2vw;
+
+	div, input, button {
+		font-size: 1em;
+		font-family: 'mainfont';
+	}
+
+	div {
+		margin: 1em;
+	}
+
+	input {
+		padding: 0.5em;
+	}
+
+	button {
+		padding: 0.5em;
+		cursor: pointer;
+	}
+
+}

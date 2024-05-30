@@ -16,6 +16,8 @@ var introScreen = {
 	}
 }
 
+var randomPetName = arandom(['Pookie','Fido','Crayon','Dulcy','Rocky', 'Princess']);
+
 function buyEgg (eggColor) {
 	if (eggColor == 'red')
 		GAME.pet.id = 0;
@@ -24,7 +26,19 @@ function buyEgg (eggColor) {
 	if (eggColor == 'blue')
 		GAME.pet.id = 2;
 
-	GAME.pet.name = prompt('What would you like to name your pet?') || arandom(['Pookie','Fido','Crayon','Dulcy','Rocky', 'Princess'])
 
-	GAME.screen = 'main';
+	//log user agent
+	console.log(navigator.userAgent)
+	//if user agent includes "electron"
+	if (navigator.userAgent.includes('Electron')) {
+		//prompt for pet name
+		electronPrompt('What would you like to name your pet?', (name) => {
+			GAME.pet.name = name || randomPetName
+			GAME.screen = 'main';
+		});
+	} else {
+		//prompt for pet name
+		GAME.pet.name = prompt('What would you like to name your pet?') || randomPetName
+		GAME.screen = 'main';
+	}	
 }
