@@ -308,14 +308,14 @@ function doBattle () {
 				  "shadowColor": "#6f0000",
 				  "shape": "number",
 				  "age": 0,
-				  "lifespan": 60,
+				  "lifespan": 100,
 				  "position": {
 					"x": 110 + (defendingPlayer==BATTLE.enemy?30:0),
 					"y": 27 + defendingPlayer.y
 				  },
 				  "velocity": {
 					"x": 0,
-					"y": -0.5
+					"y": -0.2
 				  },
 				  "bouncey": 9999,
 				  "gravity": 0.001,

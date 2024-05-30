@@ -14,6 +14,7 @@
 
 ### Changed
 - Lowered upgrade costs
+- Made battle damage indicators slower
 
 ## 1.0.0 - 2022-01-27
 
