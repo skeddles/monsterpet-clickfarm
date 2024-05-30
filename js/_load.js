@@ -103,6 +103,7 @@ function startGame () {
 		GAME.pet.x = 60;
 		GAME.pet.y = 28;
 		GAME.zone = 201;
+		updateUpgradeCosts();
 	}
 	else console.log('LOADING - starting new game')
 

@@ -12,6 +12,9 @@
 ### Removed
 - Arena no longer jumps to most expensive tier
 
+### Changed
+- Lowered upgrade costs
+
 ## 1.0.0 - 2022-01-27
 
 ### Added
